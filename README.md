@@ -1,8 +1,1 @@
-## Nextjs
-
-- TypeScript
-- firebase
-- mobx-react
-- atomic design pattern (dir)
-
-셋팅 템플릿으로 변경
+UI개발이 즐거운 개발자
