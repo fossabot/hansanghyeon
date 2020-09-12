@@ -13,6 +13,12 @@ const Container = (props: any) => (
 
 const RowStyled = styled(_Row)``;
 const Row = (props: any) => <RowStyled {...props}>{props.children}</RowStyled>;
+Row.Header = styled(_Row)`
+  margin: 40px 0;
+`;
+Row.Footer = styled(_Row)`
+  margin: 40px 0;
+`;
 
 const ColStyled = styled(_Col)``;
 const Col = (props: any) => <ColStyled {...props}>{props.children}</ColStyled>;

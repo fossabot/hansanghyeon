@@ -3,6 +3,8 @@ import { NotionRenderer } from 'react-notion';
 import axios from 'axios';
 import { GridThemeProvider, Container, Row } from 'styled-bootstrap-grid';
 import Grid from '@style/Grid';
+// Components
+import Resume from '@template/Resume';
 
 const Home = ({ blockMap }: any) => {
   const _Grid = {
@@ -21,11 +23,14 @@ const Home = ({ blockMap }: any) => {
         <title>Main Home</title>
       </Head>
       <GridThemeProvider gridTheme={_Grid}>
-        <Container>
-          <Row>
-            <NotionRenderer blockMap={blockMap} />
-          </Row>
-        </Container>
+        <>
+          <Resume />
+          <Container>
+            <Row>
+              <NotionRenderer blockMap={blockMap} />
+            </Row>
+          </Container>
+        </>
       </GridThemeProvider>
     </>
   );
