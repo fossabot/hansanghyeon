@@ -19,8 +19,12 @@ const Resume: React.FC = () => {
           <Row>
             <Col col>
               <Alert onClick={handleNotice}>
-                리메이크되거나 제거된 페이지는 기제하지 않았습니다.{' '}
-                <DimSpan style={{ fontSize: '0.6rem' }}>(2020-09-16)</DimSpan>
+                리메이크되거나 제거된 홈페이지 기제하지 않았습니다.{' '}
+                <DimSpan
+                  style={{ fontSize: '0.6rem', display: 'inline-block' }}
+                >
+                  (2020-09-16)
+                </DimSpan>
               </Alert>
             </Col>
           </Row>

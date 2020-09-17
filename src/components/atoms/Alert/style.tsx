@@ -2,8 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 const AlertBox = styled.div`
   position: relative;
-  padding: 0.55em 1.25em 0.57rem;
-  padding-right: 4em;
+  padding: 0.5em;
   border-radius: 0.25em;
   border: 1px solid;
   display: flex;
@@ -12,14 +11,30 @@ const AlertBox = styled.div`
   &:after {
     content: '';
     position: absolute;
-    height: 1em;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-    border-left: 1px solid;
-    border-right: 2px solid;
+    top: 0;
+    left: 50%;
+    width: 1em;
+    transform: translate(-50%, 0);
+    border-top: 1px solid;
+    border-bottom: 2px solid;
     border-color: inherit;
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 0 3px 3px;
+  }
+  @media (min-width: 576px) {
+    padding: 0.55em 1em 0.57rem 1.25em;
+    &:after {
+      content: '';
+      position: absolute;
+      height: 1em;
+      width: 0;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      border-left: 1px solid;
+      border-right: 2px solid;
+      border-color: inherit;
+      border-radius: 0 3px 3px 0;
+    }
   }
 `;
 
@@ -29,41 +44,31 @@ export const AlertSuccess = styled(AlertBox)`
   display: inline-block;
 `;
 
-export const Title = styled.span`
-  font-weight: bold;
-  margin-right: 8px;
-`;
-
 const WrapStyle = styled.div`
-  height: 1em;
-  line-height: 1;
   span {
     line-height: 1;
   }
 `;
 export const Wrap = {
   Root: styled.div`
-    display: flex;
+    position: relative;
+    padding-top: 28px;
+    @media (min-width: 576px) {
+      padding-top: 0;
+      padding-left: 28px;
+      padding-right: 28px;
+    }
   `,
   Inner: styled(WrapStyle)`
     display: flex;
     align-items: center;
-  `,
-  Icon: styled(WrapStyle)`
-    margin-right: 8px;
-  `,
-  Times: styled(WrapStyle)`
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0.55em 1.25em 0.57rem;
-    color: inherit;
-    box-sizing: unset;
-    cursor: pointer;
+    span {
+      word-break: keep-all;
+    }
   `,
 };
 
-export const keyframesTada = keyframes`
+const keyframesTada = keyframes`
   0% {
     transform: scale(1);
   }
@@ -87,8 +92,18 @@ export const keyframesTada = keyframes`
   }
 `;
 
-export const Tada = styled.div`
-  animation: ${keyframesTada} 2s linear infinite;
+export const TadaCheckIconWrap = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  svg {
+    animation: ${keyframesTada} 2s linear infinite;
+  }
+
+  @media (min-width: 576px) {
+    top: 50%;
+    transform: translateY(-43%);
+  }
 `;
 
 const keyframesBlink = keyframes`
@@ -103,7 +118,19 @@ const keyframesBlink = keyframes`
   }
 `;
 
-export const Blink = styled.span`
-  display: inline-block;
-  animation: ${keyframesBlink} 2s infinite both;
+export const TimesIconWrap = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: inherit;
+  box-sizing: unset;
+  cursor: pointer;
+
+  @media (min-width: 576px) {
+    top: 50%;
+    transform: translateY(-43%);
+    svg {
+      animation: ${keyframesBlink} 2s infinite both;
+    }
+  }
 `;
