@@ -1,10 +1,9 @@
-import React from 'react';
 import styled from 'styled-components';
-import { Row as _Row, Col as _Col } from 'styled-bootstrap-grid';
 import { readableColor } from 'polished';
 
 export const Wrap = styled.div`
   display: flex;
+  margin-bottom: 16px;
 `;
 
 export const ProfilePhoto = styled.div`
@@ -40,10 +39,6 @@ export const InfoList = styled.ul`
   }
 `;
 
-export const DimSpan = styled.span`
-  color: #9b9a97;
-`;
-
 export const StackList = styled.ul`
   list-style: none;
   margin: 0;
@@ -53,14 +48,18 @@ export const StackList = styled.ul`
   }
 `;
 
-const isLightnessColor = (color: string): string =>
-  readableColor(color) === '#000' ? '#3D4041' : '#EDEDEB';
+const isLightnessColor = (color: string): boolean =>
+  readableColor(color) === '#000';
 export const Code = styled.span<{ color?: string }>`
   display: inline-block;
   padding: 0.2em 0.4em;
-  background-color: ${({ color }) =>
-    color ? isLightnessColor(color) : '#EDEDEB'};
-  color: ${({ color }) => color || '#9b9a97'};
+  background-color: ${({ color, theme }) =>
+    color
+      ? isLightnessColor(color)
+        ? theme.color.grayscales.dark[0]
+        : theme.color.grayscales.light[0]
+      : '#EDEDEB'};
+  color: ${({ color, theme }) => color || theme.dimSpan};
   margin-right: 4px;
   margin-bottom: 4px;
   border-radius: 4px;
@@ -69,13 +68,3 @@ export const Code = styled.span<{ color?: string }>`
   font-style: normal;
   font-weight: 400;
 `;
-
-const RowStyled = styled(_Row)`
-  margin-bottom: 16px;
-`;
-const Row = (props: any) => <RowStyled {...props}>{props?.children}</RowStyled>;
-
-const ColStyled = styled(_Col)``;
-const Col = (props: any) => <ColStyled {...props}>{props?.children}</ColStyled>;
-
-export { Row, Col };

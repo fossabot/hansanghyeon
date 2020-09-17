@@ -1,12 +1,10 @@
 import Head from 'next/head';
-import { NotionRenderer } from 'react-notion';
-import axios from 'axios';
-import { GridThemeProvider, Container, Row } from 'styled-bootstrap-grid';
+import { GridThemeProvider } from 'styled-bootstrap-grid';
 import Grid from '@style/Grid';
 // Components
 import Resume from '@template/Resume';
 
-const Home = ({ blockMap }: any) => {
+const Home = () => {
   const _Grid = {
     ...Grid,
     container: {
@@ -20,16 +18,11 @@ const Home = ({ blockMap }: any) => {
   return (
     <>
       <Head>
-        <title>Main Home</title>
+        <title>999번만큼 코딩해</title>
       </Head>
       <GridThemeProvider gridTheme={_Grid}>
         <>
-          <Container>
-            <Resume />
-            <Row>
-              <NotionRenderer blockMap={blockMap} />
-            </Row>
-          </Container>
+          <Resume />
         </>
       </GridThemeProvider>
     </>
@@ -38,13 +31,7 @@ const Home = ({ blockMap }: any) => {
 
 export default Home;
 export async function getStaticProps() {
-  const { data } = await axios(
-    'https://notion-api.splitbee.io/v1/page/ccd992aba32f412581339a3f5df04fe8',
-  );
-
   return {
-    props: {
-      blockMap: data,
-    },
+    props: {},
   };
 }

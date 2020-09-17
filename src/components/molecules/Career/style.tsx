@@ -1,0 +1,37 @@
+import styled from 'styled-components';
+import ReactTooltip from 'react-tooltip';
+
+export const Title = styled.div`
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+`;
+export const ImageTooltipFor = styled.div`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-left: 8px;
+`;
+export const ImageTooltip = styled(ReactTooltip)`
+  padding: 0 !important;
+  opacity: 1 !important;
+  background-color: ${({ theme }) => theme.color.primary} !important;
+  img {
+    width: 100%;
+    max-width: 360px;
+  }
+  &.place-top:after {
+    border-top-color: ${({ theme }) => theme.color.primary} !important;
+  }
+  &.place-bottom:after {
+    border-bottom-color: ${({ theme }) => theme.color.primary} !important;
+  }
+  &.place-right:after {
+    border-right-color: ${({ theme }) => theme.color.primary} !important;
+  }
+  &.place-left:after {
+    border-left-color: ${({ theme }) => theme.color.primary} !important;
+  }
+`;

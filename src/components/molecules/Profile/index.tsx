@@ -2,15 +2,9 @@ import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaGithub } from 'react-icons/fa';
 import { CgWebsite } from 'react-icons/cg';
 // Components
-import {
-  InfoList,
-  Wrap,
-  ProfilePhoto,
-  Row,
-  DimSpan,
-  Code,
-  StackList,
-} from './style';
+import DimSpan from '@atom/DimSpan';
+import Code from '@atom/Code';
+import { InfoList, Wrap, ProfilePhoto, StackList } from './style';
 
 const HumanInfo: React.FC = () => {
   return (
@@ -44,7 +38,7 @@ const HumanInfo: React.FC = () => {
 
 const StackInfo: React.FC = () => {
   return (
-    <div>
+    <Wrap>
       <StackList>
         <li>
           주요 기술 <DimSpan>3개</DimSpan>
@@ -67,19 +61,15 @@ const StackInfo: React.FC = () => {
           <Code>Bootstrap 4</Code>
         </li>
       </StackList>
-    </div>
+    </Wrap>
   );
 };
 
 const Profile: React.FC = () => {
   return (
     <>
-      <Row>
-        <HumanInfo />
-      </Row>
-      <Row>
-        <StackInfo />
-      </Row>
+      <HumanInfo />
+      <StackInfo />
     </>
   );
 };
