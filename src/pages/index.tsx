@@ -23,14 +23,6 @@ const Home = () => {
       <GridThemeProvider gridTheme={_Grid}>
         <>
           <Resume />
-<<<<<<< HEAD
-          <Container>
-            <Row>
-              <NotionRenderer blockMap={blockMap} />
-            </Row>
-          </Container>
-=======
->>>>>>> 1.0.0
         </>
       </GridThemeProvider>
     </>

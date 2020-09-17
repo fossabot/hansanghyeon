@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-// Components
-import { Container, Row, Col } from './style';
-
-const Resume = () => {
-  return (
-    <Container>
-      <Row.Header />
-      <Row>
-        <Col col>Resume</Col>
-=======
 import React, { useState } from 'react';
 // Components
 import Profile from '@molecule/Profile';
@@ -48,7 +36,6 @@ const Resume: React.FC = () => {
         <Col col>
           <Career />
         </Col>
->>>>>>> 1.0.0
       </Row>
       <Row.Footer />
     </Container>
