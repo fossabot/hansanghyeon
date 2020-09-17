@@ -1,10 +1,18 @@
 import styled from 'styled-components';
 import ReactTooltip from 'react-tooltip';
 
+export const Company = styled.div`
+  margin-bottom: 40px;
+`;
 export const Title = styled.div`
   display: flex;
   align-items: center;
   font-weight: bold;
+  span {
+    font-weight: normal;
+    font-size: 0.8em;
+    margin-left: 4px;
+  }
 `;
 export const ImageTooltipFor = styled.div`
   cursor: pointer;
