@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaRegCheckCircle, FaTimes } from 'react-icons/fa';
 // Components
-import { AlertSuccess, Tada, Title, Blink, Wrap } from './style';
+import { AlertSuccess, TadaCheckIconWrap, Wrap, TimesIconWrap } from './style';
 
 interface AlertProps {
   children?: React.ReactNode;
@@ -14,19 +14,15 @@ export const Alert: React.FC<AlertProps> = ({
   return (
     <AlertSuccess>
       <Wrap.Root>
-        <Wrap.Icon>
-          <Tada>
-            <FaRegCheckCircle />
-          </Tada>
-        </Wrap.Icon>
+        <TadaCheckIconWrap>
+          <FaRegCheckCircle />
+        </TadaCheckIconWrap>
         <Wrap.Inner>
           <span>{children}</span>
         </Wrap.Inner>
-        <Wrap.Times onClick={onClick}>
-          <Blink>
-            <FaTimes />
-          </Blink>
-        </Wrap.Times>
+        <TimesIconWrap onClick={onClick}>
+          <FaTimes />
+        </TimesIconWrap>
       </Wrap.Root>
     </AlertSuccess>
   );

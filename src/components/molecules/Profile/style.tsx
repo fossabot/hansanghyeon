@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import { media } from 'styled-bootstrap-grid';
 import { readableColor } from 'polished';
 
 export const Wrap = styled.div`
   display: flex;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 `;
 
 export const ProfilePhoto = styled.div`
@@ -12,17 +14,26 @@ export const ProfilePhoto = styled.div`
   border-radius: 999px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 16px;
   img {
     width: 100%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
   }
+
+  @media (min-width: 576px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const InfoList = styled.ul`
   list-style: none;
   margin: 0;
+  padding: 0;
+  ${media.sm`
+    padding-left: 40px;
+  `};
   li {
     display: flex;
     align-items: center;
