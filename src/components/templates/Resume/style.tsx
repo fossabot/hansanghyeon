@@ -11,7 +11,9 @@ const Container = (props: any) => (
   <ContainerStyled {...props}>{props.children}</ContainerStyled>
 );
 
-const RowStyled = styled(_Row)``;
+const RowStyled = styled(_Row)`
+  margin-bottom: 16px;
+`;
 const Row = (props: any) => <RowStyled {...props}>{props.children}</RowStyled>;
 Row.Header = styled(_Row)`
   margin: 40px 0;

@@ -4,6 +4,7 @@ import Profile from '@molecule/Profile';
 import Career from '@molecule/Career';
 import Alert from '@atom/Alert';
 import DimSpan from '@atom/DimSpan';
+import Introduce from '@molecule/Introduce';
 import { Container, Row, Col } from './style';
 
 const Resume: React.FC = () => {
@@ -34,6 +35,11 @@ const Resume: React.FC = () => {
       <Row>
         <Col col>
           <Profile />
+        </Col>
+      </Row>
+      <Row>
+        <Col col>
+          <Introduce />
         </Col>
       </Row>
       <Row>

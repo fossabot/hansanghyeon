@@ -258,64 +258,62 @@ const Peterosea = () => {
                 alt=""
               />
             </ImageTooltip>
-            <p>
-              <ul>
-                <li>
-                  <a
-                    href="https://buildingpoint.co.kr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    https://buildingpoint.co.kr/
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://sketchup.buildingpoint.co.kr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    https://sketchup.buildingpoint.co.kr/
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://vico.buildingpoint.co.kr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    https://vico.buildingpoint.co.kr/
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://scanner.buildingpoint.co.kr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    https://scanner.buildingpoint.co.kr/
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://connect.buildingpoint.co.kr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    https://connect.buildingpoint.co.kr/
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://layout.buildingpoint.co.kr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    https://layout.buildingpoint.co.kr/
-                  </a>
-                </li>
-              </ul>
-            </p>
+            <ul>
+              <li>
+                <a
+                  href="https://buildingpoint.co.kr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://buildingpoint.co.kr/
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://sketchup.buildingpoint.co.kr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://sketchup.buildingpoint.co.kr/
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://vico.buildingpoint.co.kr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://vico.buildingpoint.co.kr/
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://scanner.buildingpoint.co.kr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://scanner.buildingpoint.co.kr/
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://connect.buildingpoint.co.kr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://connect.buildingpoint.co.kr/
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://layout.buildingpoint.co.kr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://layout.buildingpoint.co.kr/
+                </a>
+              </li>
+            </ul>
             <p>
               기존 운영 중이던 워드프레스 사이트를 같은 디자인의 구성으로 다른
               상품들의 홈페이지를 제작하였습니다. 기존 중첩이 많이 되던 코드를
